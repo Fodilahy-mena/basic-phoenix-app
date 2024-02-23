@@ -1,0 +1,17 @@
+
+<strong>Hello World</strong>
+<br/>
+<%!-- Pass in a local function and execute --%>
+<p><%= greeting("") %></p>
+<%!-- Or --%>
+<%!-- <.greeting/> --%>
+<br/>
+<strong class="text-grey-400"><%= @number %></strong>
+<br/>
+<.button class="bg-green-400" phx-click="add">Add</.button>
+<.button class="bg-red-400" phx-click="subtract">Subtract</.button>
+
+<.simple_form for={@form} phx-submit="adding_more">
+    <.input field={@form[:add_amount]} value={@form.params.default_amount}/>
+    <.button class="bg-blue-400">Add more</.button>
+</.simple_form>
